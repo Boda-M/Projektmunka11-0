@@ -1,0 +1,49 @@
+body{
+    /*background: rgb(31, 209, 31);*/
+    background-image: url("images/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: auto 100vh;
+    margin: 0px;
+}
+
+.navbar{
+    background-color: rgb(9, 138, 9);
+    overflow:hidden;
+}
+
+.navbar a{
+    padding: 20px;
+    background-color: gray;
+    color: white;
+    float: left;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.navbar a:hover{
+    background-color: rgb(173, 173, 173);
+}
+
+.titleBar{
+    background-color: aqua;
+    margin: 0px;
+    height: 15vw;
+    background-image: url("images/TitleBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.titleBar h1{
+    margin: 0px;
+    text-align: center;
+    color: white;
+    font-size: 8vw;
+}
+
+.content{
+    padding: 2vw 10vw 2vw 10vw;
+    font-size: x-large;
+}
