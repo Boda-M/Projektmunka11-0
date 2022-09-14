@@ -3,24 +3,52 @@ body{
     background-image: url("images/Background.jpg");
     background-repeat: no-repeat;
     background-size: auto 100vh;
+    background-attachment: fixed;
+    overflow:auto;/*Ronda görgő sliderek*/
     margin: 0px;
 }
 
 .navbar{
     background-color: rgb(9, 138, 9);
     overflow:hidden;
+    
+    /*transition-duration: 300ms;*/
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    margin-top: 6vw;
+  }
 
 .navbar a{
     padding: 20px;
     background-color: gray;
     color: white;
     float: left;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+    transition-duration: 300ms;
+    text-decoration: none;
+}
+
+.navbar a.active{
+    background-color: rgb(3, 3, 146);
 }
 
 .navbar a:hover{
     background-color: rgb(173, 173, 173);
+}
+
+.navbar a.active:hover{
+    background-color: rgb(52, 52, 255);
 }
 
 .titleBar{
@@ -43,7 +71,60 @@ body{
     font-size: 8vw;
 }
 
-.content{
-    padding: 2vw 10vw 2vw 10vw;
+.content, .question{
+    padding: 1vw;
+    margin: 2vw 10vw 2vw 10vw;
     font-size: x-large;
+    background-color: rgba(13, 228, 66, 0.45);
+    border: 2px solid black;
+    border-radius: 3vw;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+input + label{
+    padding: 8px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+input:checked + label{
+    /*background-color: rgba(0, 255, 255, 0.37);*/
+    background-color: rgba(245, 222, 179, 0.411);
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+input[type="radio"]{
+    /*display:none;*/
+    opacity: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.question p{
+    margin: 5px;
+    font-size: 2vw;
+    border-bottom: 1px solid black;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hiddeScrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hiddeScrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
