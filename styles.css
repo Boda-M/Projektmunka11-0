@@ -25,7 +25,7 @@ body{
     width: 100%;
 }
 
-.sticky + .content {
+.sticky + .content, .sticky + .question {
     margin-top: 6vw;
   }
 
@@ -37,6 +37,22 @@ body{
     font-family:Arial, Helvetica, sans-serif;
     transition-duration: 300ms;
     text-decoration: none;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.navbar a:last-child{
+    border-bottom-right-radius: 2vw;
+    border-top-right-radius: 2vw;
+    border-left: 1px solid black;
+    border-right: none;
+}
+
+.navbar a:first-child{
+    border-bottom-left-radius: 2vw;
+    border-top-left-radius: 2vw;
+    border-right: 1px solid black;
+    border-left: none;
 }
 
 .navbar a.active{
@@ -72,12 +88,20 @@ body{
 }
 
 .content, .question{
+    white-space: initial;
     padding: 1vw;
-    margin: 2vw 10vw 2vw 10vw;
+    margin: 2vw 20vw 2vw 20vw;
     font-size: x-large;
     background-color: rgba(13, 228, 66, 0.45);
     border: 2px solid black;
     border-radius: 3vw;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .content, .question{
+        margin: 2vw 10vw 2vw 10vw;
+    }
 }
 
 .noselect {
@@ -127,4 +151,22 @@ input[type="radio"]{
 .hiddeScrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+
+.image{
+    border-radius: 3vw;
+    width: 30vw;
+}
+
+.ibParent{
+    margin: 2vw 20vw 2vw 20vw;
+    white-space: nowrap;
+}
+.inlineBlock{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ibParent p{
+    margin: 0vw;
 }
