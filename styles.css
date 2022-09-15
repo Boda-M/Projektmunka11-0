@@ -155,18 +155,28 @@ input[type="radio"]{
 
 .image{
     border-radius: 3vw;
-    width: 30vw;
+    margin-left: 0.5vw;
+    width: 28.5vw;
 }
 
 .ibParent{
     margin: 2vw 20vw 2vw 20vw;
     white-space: nowrap;
+    /*display:flex;
+    align-items: center;
+    justify-content: center;*/
 }
+
 .inlineBlock{
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
 }
 
 .ibParent p{
     margin: 0vw;
+    width: 28.5vw;
+}
+
+.ibParent + .ibParent{
+    margin-top: 0px;
 }
