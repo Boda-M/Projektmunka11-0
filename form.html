@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
 </head>
 <html>
-<body class="noselect hiddeScrollbar" onload="onLoad(); loadQuestions()">
+<body class="noselect hiddeScrollbar" onload="loadQuestions(); onLoad();">
 <div class="titleBar">
     <h1>Kérdések</h1>
 </div>
@@ -20,10 +20,14 @@
 </div>
 
 <div class="mid" id="mid">
-
+    <div class="question verticalCenter">
+        <p class="questionTitle checkButton" onclick="checkAll()">Ellenőrzés</p>
+        <p class="questionScore" id="sum">0/5</p>
+    </div>
 </div>
+
 <footer>
-    <p>&copyBoda G. Máté & Gollmer Henrik 2022</p>
+    <p>&copyGollmer Henrik & Boda G. Máté 2022</p>
 </footer>
 </body>
 </html>
