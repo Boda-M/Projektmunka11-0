@@ -26,7 +26,7 @@ body{
     width: 100%;
 }
 
-.sticky + .content, .sticky + .question {
+.sticky + .content, .sticky + .question, .sticky + .mid {
     margin-top: 6vw;
   }
 
@@ -89,10 +89,32 @@ body{
     font-size: 8vw;
 }
 
+footer{
+    /*background-color: #16c510;*/
+    background: linear-gradient(to bottom,  rgb(255,255,255,0) 50%, #16c510 51%);
+    height: 3vw;
+    padding-left: 75vw;
+    padding-right: 5vw;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+footer p{
+    background-color: #16c510;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1vw;
+    border-radius: 1.5vw;
+    height: 100%;
+    font-size: 1vw;
+}
+
 .content, .question{
+    box-sizing: border-box;/*Why is this not the default?*/
     white-space: initial;
     padding: 1vw;
-    margin: 2vw 20vw 2vw 20vw;
+    margin: 2vw 0vw 2vw 0vw;
+    width: 100%;
     font-size: x-large;
     /*background-color: rgba(13, 228, 66, 0.45);*/
     background-color: rgba(22, 197, 16, 0.45);
@@ -100,12 +122,6 @@ body{
     border-radius: 3vw;
 }
 
-
-@media only screen and (max-width: 1200px) {
-    .content, .question{
-        margin: 2vw 10vw 2vw 10vw;
-    }
-}
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -139,6 +155,11 @@ input[type="radio"]{
     margin-bottom: 12px;
 }
 
+ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 .question p{
     margin: 5px;
     font-size: 2vw;
@@ -160,10 +181,30 @@ input[type="radio"]{
     border-radius: 3vw;
     /*margin-left: 0.5vw;*/
     /*width: 28.5vw;*/
-    margin: 2vw 20vw 2vw 20vw;
-    width: 60vw;
-
+    margin: 2vw 0vw 0vw 0vw;
+    border: 2px solid #16c510;
+    width: 100%;
 }
+
+.imgDescription{
+    text-align: center;
+    margin-top: -1vw;
+    padding-top: 0.7vw;
+    padding-bottom: 0.3vw;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    font-size: 1.3vw;
+    background-color: rgba(22, 197, 16, 0.45);
+}
+
+/*
+.mid .image{
+    margin: 0.5%;
+    margin-top: 0px;
+    width: 50%;
+}*/
 
 .ibParent{
     margin: 2vw 20vw 2vw 20vw;
@@ -178,6 +219,16 @@ input[type="radio"]{
     vertical-align: middle;
 }
 
+.ibLeft{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ibRight{
+    display: inline-block;
+    vertical-align: top;
+}
+
 .ibParent p{
     margin: 0vw;
     width: 28.5vw;
@@ -185,4 +236,66 @@ input[type="radio"]{
 
 .ibParent + .ibParent{
     margin-top: 0px;
+}
+
+.mid{/*60 or so vw column in the middle*/
+    width: 60vw;
+    margin: 2vw 20vw 2vw 20vw;
+    overflow: hidden;
+    /*background-color: #bbf;*/
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.w40{
+    width: 40%;
+}
+
+.w50{
+    width: 50%;
+}
+
+.w60{
+    width: 60%;
+}
+
+.column{
+    box-sizing: border-box;
+    float: left;
+    padding: 0px;
+}
+
+.column + .column{/*Margin between multiple columns*/
+    margin-left: 1.5%;
+}
+
+.column + .w40{
+    width: 38%;
+}
+
+.column + .w50{
+    width: 48%;
+}
+
+.column + .w60{
+    width: 58%;
+}
+
+
+p{
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .mid{
+        margin: 0vw 10vw 0vw 10vw;
+        width: 80vw;
+    }
 }

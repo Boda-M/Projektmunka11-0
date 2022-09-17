@@ -52,5 +52,6 @@ function addQuestion(id, question, answers){
 
         div.appendChild(document.createElement("br"));
     }
-    document.body.appendChild(div);
+    document.getElementById("mid").appendChild(div);;
+    //document.body.appendChild(div);
 }
