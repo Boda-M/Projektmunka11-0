@@ -86,7 +86,7 @@ body{
     margin: 0px;
     text-align: center;
     color: white;
-    font-size: 8vw;
+    font-size: 6vw;
 }
 
 footer{
@@ -356,6 +356,17 @@ p{
     box-sizing: border-box;
     margin-top: 1%;
     margin-bottom: 1%;
+}
+
+.content h1{
+    font-size: 4vw;
+    border-bottom: 1px solid black;
+    margin-top: 0.3vw;
+    margin-bottom: 1vw;
+}
+
+.content h1+p{
+    padding-left: 2vw;
 }
 
 
