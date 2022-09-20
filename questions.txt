@@ -22,6 +22,6 @@ c) Nem szükséges nekik sín, ugyanis lebegnek
 
 Miért nevezik okosnak az okosotthont?
 a) megoldja a házi feladataidat
-b) teljesíti a Turing tesztet
+b) Teljesíti a Turing tesztet
 c) magától szabályozza az elektromos berendezéseket pl a fűtést és a világítást
 
