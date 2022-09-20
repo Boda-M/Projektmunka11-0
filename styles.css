@@ -72,7 +72,7 @@ body{
 .titleBar{
     background-color: aqua;
     margin: 0px;
-    height: 15vw;
+    height: 23vw;
     background-image: url("images/TitleBg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,7 +113,7 @@ footer p{
     box-sizing: border-box;/*Why is this not the default?*/
     overflow: hidden;
     white-space: initial;
-    padding: 1vw;
+    padding: 1.3vw;
     margin: 2vw 0vw 2vw 0vw;
     width: 100%;
     font-size: x-large;
@@ -358,14 +358,16 @@ p{
     margin-bottom: 1%;
 }
 
-.content h1{
-    font-size: 4vw;
+.content .header{
+    font-size: 2vw;
     border-bottom: 1px solid black;
     margin-top: 0.3vw;
     margin-bottom: 1vw;
+    padding: 0.3vw;
+    font-style: normal;
 }
 
-.content h1+p{
+.content .header+p{
     padding-left: 2vw;
 }
 

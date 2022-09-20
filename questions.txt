@@ -1,0 +1,27 @@
+Milyen anyagokat bocsájt ki a hidrogénaautó levegőn kívül?
+a) víz (jó)
+b) hidrogén
+c) széndioxid
+
+Mióta van picaon hidrogénnel üzemelt autó:
+a) 1910
+b) 2010
+c) 2014 (jó)
+d) 2018
+
+Mekkora a jelenleg forgalomban lévő maglevek végsebessége?
+a) 130km/h
+b) 200km/h
+c) 430km/h (jó)
+d) 900 km/h
+
+A sebesség mellett melyik másik nagy előnye van a maglev vonatoknak?
+a) Csendesek (jó)
+b) A szükséges energiát a levegőből nyerik ki
+c) Nem szükséges nekik sín, ugyanis lebegnek
+
+Miért nevezik okosnak az okosotthont?
+a) megoldja a házi feladataidat
+b) teljesíti a Turing tesztet
+c) magától szabályozza az elektromos berendezéseket pl a fűtést és a világítást
+
