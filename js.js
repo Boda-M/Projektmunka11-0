@@ -3,6 +3,7 @@ let sticky;
 let navbar;
 let questions;
 let sumElement;
+let rawQuestions;
 function onLoad(){
     console.log("Page loaded");
     //Sticky navbar
@@ -12,13 +13,32 @@ function onLoad(){
     navbar = document.getElementById("navbar");
     // Get the offset position of the navbar
     sticky = navbar.offsetTop;
+
+    rawQuestions = [
+        /*["Kérdés", "Jó", ["Dummy 1", "Dummy 2"]],
+        ["Kérdés2", "Jó", ["Dummy 1", "Dummy 2", "Dummy 3"]]*/
+        ["Milyen anyagokat bocsájt ki a hidrogénaautó levegőn kívül?", "Vizet", ["Hidrogént", "Széndioxidot"]],
+        ["Mióta van picaon hidrogénnel üzemelő autó?", "2014", ["1910", "2010", "2018"]],
+        ["Mekkora a jelenleg forgalomban lévő maglevek végsebessége?", "430 km/h", ["130 km/h", "200 km/h", "870 km/h"]],
+        ["A sebesség mellett milyen más előnye van a maglev vonatoknak?", "Csendesek", ["A szükséges energiát a levegőből nyerik ki", "Nem szükséges nekik sín, ugyanis lebegnek"]],
+        ["Miért nevezik okosnak az okosotthont?", "Magától szabályozza az elektromos berendezéseket pl. a fűtést és a világítást", ["Megoldja a házi feladataidat", "Teljesíti a Turing tesztet"]]
+
+    ];
+    shuffleArray(rawQuestions);
 }
+
 function loadQuestions(){
     questions = new Array();
+    /*
     questions.push(new Question(1, "Kérdés 1", "Kecske", ["Capybara", "Ananász"]));
     questions.push(new Question(2, "Kérdés 2", "Kecske", ["Capybara", "Ananász"]));
     questions.push(new Question(3, "Kérdés 3", "Kecske", ["Capybara", "Ananász"]));
     questions.push(new Question(4, "Kérdés 4", "Kecske", ["Capybara", "Ananász"]));
+    */
+    for(let i = 0; i < rawQuestions.length; i++){
+        //questions.push(new Question(4, "Kérdés 4", "Kecske", ["Capybara", "Ananász"]));
+        questions.push(new Question(i, rawQuestions[i][0], rawQuestions[i][1], rawQuestions[i][2]));
+    }
     sumElement = document.getElementById("sum");
     sumElement.innerText = ("0/" + questions.length);
 }
